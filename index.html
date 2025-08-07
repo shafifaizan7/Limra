@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Limra Cafe - Menu & Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #1c1f24;
+      color: #f3f3f3;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body::before {
+  content: "KFC";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 180px; /* You can adjust size */
+  font-weight: 900;
+  color: rgba(255, 0, 0, 0.12); /* Light red with transparency */
+  font-family: 'Arial Black', Arial, sans-serif;
+  pointer-events: none; /* So it doesn't interfere with clicks */
+  user-select: none; /* Prevent selection */
+  z-index: 0;
+  white-space: nowrap;
+  letter-spacing: 20px;
+}
+
+    header {
+      background: #232634;
+      padding: 28px 0 6px 0;
+      text-align: center;
+      box-shadow: 0 2px 12px #0004;
+    }
+    header h1 {
+      font-size: 2.4em;
+      color: #febe3b;
+      font-family: 'Bebas Neue', cursive, sans-serif;
+      margin: 0;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+      text-shadow: 1px 3px 0 #0008;
+    }
+    header .subtitle {
+      font-size: 1.2em;
+      color: #febe3bcf;
+      font-family: 'Caveat', cursive, sans-serif;
+      margin-bottom: 20px;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 1px 0 #0005;
+    }
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 15px 0 15px;
+    }
+    .menu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+    .menu-card {
+      background: #232634;
+      border-radius: 17px;
+      box-shadow: 0 5px 18px #14141a33;
+      overflow: hidden;
+      width: 265px;
+      text-align: center;
+      margin-bottom: 24px;
+      border: 2.5px solid #292c39bb;
+      transition: transform 0.17s;
+    }
+    .menu-card:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 8px 32px #0008;
+    }
+    .menu-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-bottom: 2px solid #febe3b50;
+    }
+    .item-name {
+      font-family: 'Bebas Neue', cursive, sans-serif;
+      font-size: 1.24em;
+      color: #febe3b;
+      margin: 19px 0 9px 0;
+      letter-spacing: 2.1px;
+      text-shadow: 0 1px #0008;
+    }
+    .item-desc {
+      font-size: 1em;
+      color: #cfcfcf;
+      padding: 0 12px 7px 12px;
+      min-height: 20px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .price-list {
+      text-align: left;
+      margin: 0 0 17px 0;
+      padding: 0 24px 0 24px;
+    }
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.08em;
+      background: #232634;
+      color: #9be7fa;
+      font-family: 'Fira Mono', monospace, sans-serif;
+      font-weight: 600;
+      margin-bottom: 5px;
+      border-bottom: 1px dotted #37445e2e;
+      padding-bottom: 2px;
+    }
+    .price-size {
+      color: #6ee7b7;
+      font-weight: 500;
+      font-family: 'Caveat', cursive, monospace;
+    }
+    .price-amount {
+      color: #ffe066;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .contact-section {
+      margin: 44px auto 0 auto;
+      background: #26293c;
+      border-radius: 0 0 20px 20px;
+      padding: 38px 15px 28px 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px #0002;
+    }
+    .contact-section h2 {
+      color: #febe3b;
+      font-family: 'Bebas Neue', cursive, monospace;
+      font-size: 2em;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+    }
+    .contact-details, .contact-social {
+      font-size: 1.18em;
+      color: #e2be18;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-bottom: 8px;
+    }
+    .contact-social {
+      color: #d3d2cc;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px) {
+      .menu-grid { flex-direction: column; align-items: center; }
+    }
+    .container {
+  position: relative;
+  z-index: 1;
+  /* other styles */
+}
+
+  </style>
+  <!-- Google Fonts for style variety -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Fira+Mono|Bebas+Neue|Caveat:700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Limra Cafe</h1>
+    <div class="subtitle">Korutla Fried Chicken & More</div>
+  </header>
+  <div class="container">
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="images/crispy chicken.jpg" alt="Crispy Chicken">
+        <div class="item-name">Crispy Chicken</div>
+        <div class="item-desc">Classic golden fried chicken with our secret seasoning.</div>
+        <div class="price-list">
+          <div class="price-item"><span class="price-size">1 Pc.</span><span class="price-amount">₹90</span></div>
+          <div class="price-item"><span class="price-size">2 Pc.</span><span class="price-amount">₹170</span></div>
+          <div class="price-item"><span class="price-size">4 Pc.</span><span class="price-amount">₹330</span></div>
+          <div class="price-item"><span class="price-size">6 Pc.</span><span class="price-amount">₹480</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/peri peri.jpg" alt="Peri Peri Chicken">
+        <div class="item-name">Peri Peri Chicken</div>
+        <div class="item-desc">Juicy poultry marinated in fiery peri peri sauce.</div>
+        <div class="price-list">
+          <div class="price-item"><span class="price-size">1 Pc.</span><span class="price-amount">₹100</span></div>
+          <div class="price-item"><span class="price-size">2 Pc.</span><span class="price-amount">₹190</span></div>
+          <div class="price-item"><span class="price-size">4 Pc.</span><span class="price-amount">₹350</span></div>
+          <div class="price-item"><span class="price-size">6 Pc.</span><span class="price-amount">₹490</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/chicken pop corn.jpg" alt="Chicken Popcorn">
+        <div class="item-name">Chicken Popcorn</div>
+        <div class="item-desc">Crunchy bite-sized chicken pieces.</div>
+        <div class="price-list">
+          <div class="price-item"><span class="price-size">Regular</span><span class="price-amount">₹110</span></div>
+          <div class="price-item"><span class="price-size">Large</span><span class="price-amount">₹200</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/prawns.jpg" alt="Fish Popcorn">
+        <div class="item-name">Fish Popcorn</div>
+        <div class="item-desc">Crispy, seasoned fish nuggets for a seafood twist.</div>
+        <div class="price-list">
+          <div class="price-item"><span class="price-size">Regular</span><span class="price-amount">₹150</span></div>
+          <div class="price-item"><span class="price-size">Large</span><span class="price-amount">₹250</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/bucket.jpg" alt="Bucket Combo">
+        <div class="item-name">Bucket Combos</div>
+        <div class="item-desc">Perfect for sharing, combos of chicken delights.</div>
+        <div class="price-list">
+          <div class="price-item"><span>Crispy Chicken 10 Pc.</span><span class="price-amount">₹810</span></div>
+          <div class="price-item"><span>Peri Peri Chicken 10 Pc.</span><span class="price-amount">₹850</span></div>
+          <div class="price-item"><span>Crispy Strips 12 Pc.</span><span class="price-amount">₹490</span></div>
+          <div class="price-item"><span>Peri Peri Strips 10 Pc.</span><span class="price-amount">₹460</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/peri peri.jpg" alt="Chicken Strips">
+        <div class="item-name">Chicken Strips</div>
+        <div class="item-desc">Tender, spiced strips—perfect with dips.</div>
+        <div class="price-list">
+          <div class="price-item"><span>Crispy Chicken 3 Pc.</span><span class="price-amount">₹130</span></div>
+          <div class="price-item"><span>Crispy Chicken 6 Pc.</span><span class="price-amount">₹250</span></div>
+          <div class="price-item"><span>Peri Peri Chicken 3 Pc.</span><span class="price-amount">₹140</span></div>
+          <div class="price-item"><span>Peri Peri Chicken 6 Pc.</span><span class="price-amount">₹280</span></div>
+          <div class="price-item"><span>Crispy Fish 3 Pc.</span><span class="price-amount">₹150</span></div>
+          <div class="price-item"><span>Crispy Fish 6 Pc.</span><span class="price-amount">₹300</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/nagets.jpg" alt="Chicken Nuggets">
+        <div class="item-name">Chicken Nuggets</div>
+        <div class="item-desc">Delicious golden nuggets—kids’ favorite!</div>
+        <div class="price-list">
+          <div class="price-item"><span>6 Pc.</span><span class="price-amount">₹120</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/prawns.jpg" alt="Crispy Prawns">
+        <div class="item-name">Crispy Prawns</div>
+        <div class="item-desc">Savory, battered prawns with zingy seasoning.</div>
+        <div class="price-list">
+          <div class="price-item"><span>Full</span><span class="price-amount">₹300</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/fries.jpg" alt="French Fries">
+        <div class="item-name">French Fries</div>
+        <div class="item-desc">Crisp, golden fries—classic or peri peri flavor.</div>
+        <div class="price-list">
+          <div class="price-item"><span>Regular</span><span class="price-amount">₹100</span></div>
+          <div class="price-item"><span>Large</span><span class="price-amount">₹150</span></div>
+          <div class="price-item"><span>Peri Peri Regular</span><span class="price-amount">₹120</span></div>
+          <div class="price-item"><span>Peri Peri Large</span><span class="price-amount">₹170</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="images/snacks.jpg" alt="Veg Snacks">
+        <div class="item-name">Veg Fingers & Veg Nuggets</div>
+        <div class="item-desc">Crunchy vegetarian snacks for all.</div>
+        <div class="price-list">
+          <div class="price-item"><span>Veg Fingers 6 Pc.</span><span class="price-amount">₹120</span></div>
+          <div class="price-item"><span>Veg Nuggets 6 Pc.</span><span class="price-amount">₹120</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Section -->
+    <div class="contact-section">
+  <h2>Contact Us</h2>
+  <div class="contact-details">
+    <span><b>Phone:</b> 9059400786</span><br>
+    <span><b>Cell:</b> 7989257686</span><br>
+    <span><b>Location:</b> Korutla, India</span>
+  </div>
+  <div style="max-width:400px; margin:18px auto 6px auto; border-radius:13px; overflow:hidden; box-shadow:0 4px 16px #23263455;">
+    <iframe
+      src="https://www.google.com/maps?q=Korutla,India&output=embed"
+      width="100%"
+      height="220"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Limra Cafe Location"></iframe>
+  </div>
+  <div class="contact-social">
+    Connect: <span style="color:#febe3b;">Instagram | Facebook</span><br>
+    <span style="font-size:0.99em; color:#c2bbb1;">Order by phone call only.</span>
+  </div>
+</div>
+  </div>
+</body>
+</html>
